@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "application", "application"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMQ.Application", "RMQ.Application\RMQ.Application.csproj", "{A43CD0EF-244A-4419-BF4B-7C5D9FBF69BC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure.common", "infrastructure.common", "{F866E447-51E5-4673-801B-F20C1219CF82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMQ.Infrastructure.Common", "RMQ.Infrastructure.Common\RMQ.Infrastructure.Common.csproj", "{0647B367-EBD1-479A-BA42-3E7D0B4FC73B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,10 @@ Global
 		{A43CD0EF-244A-4419-BF4B-7C5D9FBF69BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A43CD0EF-244A-4419-BF4B-7C5D9FBF69BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A43CD0EF-244A-4419-BF4B-7C5D9FBF69BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0647B367-EBD1-479A-BA42-3E7D0B4FC73B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0647B367-EBD1-479A-BA42-3E7D0B4FC73B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0647B367-EBD1-479A-BA42-3E7D0B4FC73B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0647B367-EBD1-479A-BA42-3E7D0B4FC73B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{5F298EB3-272C-4C68-A91D-FCDDFD9E84BE} = {A5D68819-F218-4BEB-8187-1BBC93732E1D}
 		{A43CD0EF-244A-4419-BF4B-7C5D9FBF69BC} = {708251FE-DCA3-4756-B831-6B6EB7A10471}
+		{0647B367-EBD1-479A-BA42-3E7D0B4FC73B} = {F866E447-51E5-4673-801B-F20C1219CF82}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {345BFA20-0771-411E-A7BB-6E7703117AEA}
