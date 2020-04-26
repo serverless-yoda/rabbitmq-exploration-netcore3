@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "basic-queue", "basic-queue", "{72A3D700-49BD-4E44-9895-21DF18D8DBE4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domain", "domain", "{A5D68819-F218-4BEB-8187-1BBC93732E1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMQ.Domain", "RMQ.Domain\RMQ.Domain.csproj", "{5F298EB3-272C-4C68-A91D-FCDDFD9E84BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F298EB3-272C-4C68-A91D-FCDDFD9E84BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F298EB3-272C-4C68-A91D-FCDDFD9E84BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F298EB3-272C-4C68-A91D-FCDDFD9E84BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F298EB3-272C-4C68-A91D-FCDDFD9E84BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5F298EB3-272C-4C68-A91D-FCDDFD9E84BE} = {A5D68819-F218-4BEB-8187-1BBC93732E1D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {345BFA20-0771-411E-A7BB-6E7703117AEA}
+	EndGlobalSection
+EndGlobal
