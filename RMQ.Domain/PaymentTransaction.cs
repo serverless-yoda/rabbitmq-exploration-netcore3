@@ -2,6 +2,7 @@
 
 namespace RMQ.Domain
 {
+    [Serializable]
     public class PaymentTransaction
     {
         public int  Id { get; set; }
