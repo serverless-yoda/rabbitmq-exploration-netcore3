@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domain", "domain", "{A5D688
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMQ.Domain", "RMQ.Domain\RMQ.Domain.csproj", "{5F298EB3-272C-4C68-A91D-FCDDFD9E84BE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "application", "application", "{708251FE-DCA3-4756-B831-6B6EB7A10471}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMQ.Application", "RMQ.Application\RMQ.Application.csproj", "{A43CD0EF-244A-4419-BF4B-7C5D9FBF69BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +23,17 @@ Global
 		{5F298EB3-272C-4C68-A91D-FCDDFD9E84BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F298EB3-272C-4C68-A91D-FCDDFD9E84BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F298EB3-272C-4C68-A91D-FCDDFD9E84BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A43CD0EF-244A-4419-BF4B-7C5D9FBF69BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A43CD0EF-244A-4419-BF4B-7C5D9FBF69BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A43CD0EF-244A-4419-BF4B-7C5D9FBF69BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A43CD0EF-244A-4419-BF4B-7C5D9FBF69BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5F298EB3-272C-4C68-A91D-FCDDFD9E84BE} = {A5D68819-F218-4BEB-8187-1BBC93732E1D}
+		{A43CD0EF-244A-4419-BF4B-7C5D9FBF69BC} = {708251FE-DCA3-4756-B831-6B6EB7A10471}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {345BFA20-0771-411E-A7BB-6E7703117AEA}
