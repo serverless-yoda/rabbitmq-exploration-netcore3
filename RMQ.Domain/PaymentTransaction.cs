@@ -8,6 +8,8 @@ namespace RMQ.Domain
         public string  Name { get; set; }
         public string CardNumber { get; set; }
         public int CardTypeId { get; set; }
-        
+
+        public decimal AmountToPay { get; set; }
+
     }
 }
