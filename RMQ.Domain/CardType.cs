@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RMQ.Domain
+﻿namespace RMQ.Domain
 {
     public class CardType
     {

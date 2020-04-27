@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RMQ.Domain
+﻿namespace RMQ.Domain
 {
     public class PurchaseTransaction
     {
@@ -11,7 +7,7 @@ namespace RMQ.Domain
         public string PurchaseNumber { get; set; }
 
         public string CompanyName { get; set; }
-       
+
         public int CardTypeId { get; set; }
     }
 }
