@@ -26,7 +26,7 @@ namespace RMQ.basicqueue.Console
 
         private static void CreateQueues()
         {
-            int counter = 100;
+            int counter = 10000;
             Random rnd = new Random();
 
             var builder = QueueDirectorBuilder
@@ -49,10 +49,22 @@ namespace RMQ.basicqueue.Console
                 var message = JsonConvert.SerializeObject(payment);
                 var body = Encoding.UTF8.GetBytes(message);
 
-                builder.Model.BasicPublish("", Utility.QUEUE_NAME, null, body);
+                /*
+                 * Marking messages as persistent doesn't fully guarantee that a message won't be lost. 
+                 * Although it tells RabbitMQ to save the message to disk, 
+                 * there is still a short time window when RabbitMQ has accepted a message and hasn't saved it yet
+                */
+                
+                var property = builder.Model.CreateBasicProperties();
+                property.Persistent = true;
+
+                builder.Model.BasicPublish(exchange:"", 
+                                    routingKey:Utility.QUEUE_NAME, 
+                                    basicProperties:property,
+                                    body:body);
                 WriteLine("[x] Payment Message Sent: {0} : {1}", payment.CardNumber, payment.AmountToPay);
 
-                System.Threading.Thread.Sleep(1000);
+                //System.Threading.Thread.Sleep(1000);
             }
         }
 

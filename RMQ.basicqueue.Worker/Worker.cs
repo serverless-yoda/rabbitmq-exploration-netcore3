@@ -31,11 +31,27 @@ namespace RMQ.basicqueue.Worker
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+                //_logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+
+                /*
+             * This tells RabbitMQ not to give more than one message to a worker at a time. 
+             * Or, in other words, don't dispatch a new message to a worker until it has processed and acknowledged the previous one. 
+             * Instead, it will dispatch it to the next worker that is not still busy.
+             */
+                _builder.Model.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
+
 
                 var consumer = new AsyncEventingBasicConsumer(_builder.Model);
                 consumer.Received += Consumer_Received;
-                _builder.Model.BasicConsume(Utility.QUEUE_NAME, true, consumer);
+
+                /*
+                 setting autoAck: false will be sure that even if you kill a worker using CTRL+C while it was processing a message, 
+                 nothing will be lost. Soon after the worker dies all unacknowledged messages will be redelivered.
+                 */
+
+                _builder.Model.BasicConsume(queue: Utility.QUEUE_NAME,
+                                            autoAck: false,
+                                            consumer: consumer);
 
                 await Task.Delay(1000, stoppingToken);
             }
@@ -47,15 +63,16 @@ namespace RMQ.basicqueue.Worker
             System.ReadOnlyMemory<byte> body = e.Body;
             var message = Encoding.UTF8.GetString(body.ToArray());
             var eventName = e.RoutingKey;
-           
+
             await ProcessEvent(null, eventName).ConfigureAwait(false);
 
+            ((AsyncEventingBasicConsumer)sender).Model.BasicAck(deliveryTag: e.DeliveryTag, multiple: false);
         }
 
         private async Task ProcessEvent(string body, string eventName)
         {
             Write(body + "=" + eventName);
-            _logger.LogInformation("Event : {message}", body);
+            _logger.LogInformation("Event : {eventName} , Message : {message}", eventName,body);
             await Task.CompletedTask;
         }
     }
