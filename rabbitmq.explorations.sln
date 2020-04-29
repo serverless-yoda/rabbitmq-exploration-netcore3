@@ -7,19 +7,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "basic-queue", "basic-queue"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domain", "domain", "{A5D68819-F218-4BEB-8187-1BBC93732E1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMQ.Domain", "RMQ.Domain\RMQ.Domain.csproj", "{5F298EB3-272C-4C68-A91D-FCDDFD9E84BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMQ.Domain", "RMQ.Domain\RMQ.Domain.csproj", "{5F298EB3-272C-4C68-A91D-FCDDFD9E84BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "application", "application", "{708251FE-DCA3-4756-B831-6B6EB7A10471}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMQ.Application", "RMQ.Application\RMQ.Application.csproj", "{A43CD0EF-244A-4419-BF4B-7C5D9FBF69BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMQ.Application", "RMQ.Application\RMQ.Application.csproj", "{A43CD0EF-244A-4419-BF4B-7C5D9FBF69BC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure.common", "infrastructure.common", "{F866E447-51E5-4673-801B-F20C1219CF82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMQ.Infrastructure.Common", "RMQ.Infrastructure.Common\RMQ.Infrastructure.Common.csproj", "{0647B367-EBD1-479A-BA42-3E7D0B4FC73B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMQ.Infrastructure.Common", "RMQ.Infrastructure.Common\RMQ.Infrastructure.Common.csproj", "{0647B367-EBD1-479A-BA42-3E7D0B4FC73B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMQ.basicqueue.Console", "RMQ.basicqueue.Console\RMQ.basicqueue.Console.csproj", "{797E58E6-505C-490C-B05E-CDCD46FA044A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMQ.basicqueue.Console", "RMQ.basicqueue.Console\RMQ.basicqueue.Console.csproj", "{797E58E6-505C-490C-B05E-CDCD46FA044A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMQ.basicqueue.Worker", "RMQ.basicqueue.Worker\RMQ.basicqueue.Worker.csproj", "{7498F401-D905-4348-8BD0-89FA49E174B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMQ.basicqueue.Worker", "RMQ.basicqueue.Worker\RMQ.basicqueue.Worker.csproj", "{7498F401-D905-4348-8BD0-89FA49E174B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "publisher-subscriber", "publisher-subscriber", "{42DC6F89-8703-48AD-9D74-017812AF340B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMQ.publishersubscriber.Console", "RMQ.publishersubscriber.Console\RMQ.publishersubscriber.Console.csproj", "{4620DBBD-AA65-4F7D-9975-0084E01BD97E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMQ.publishersubscriber.Worker", "RMQ.publishersubscriber.Worker\RMQ.publishersubscriber.Worker.csproj", "{D89F0F33-5ABD-4FB0-A945-15AA99429C36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +53,14 @@ Global
 		{7498F401-D905-4348-8BD0-89FA49E174B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7498F401-D905-4348-8BD0-89FA49E174B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7498F401-D905-4348-8BD0-89FA49E174B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4620DBBD-AA65-4F7D-9975-0084E01BD97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4620DBBD-AA65-4F7D-9975-0084E01BD97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4620DBBD-AA65-4F7D-9975-0084E01BD97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4620DBBD-AA65-4F7D-9975-0084E01BD97E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D89F0F33-5ABD-4FB0-A945-15AA99429C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D89F0F33-5ABD-4FB0-A945-15AA99429C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D89F0F33-5ABD-4FB0-A945-15AA99429C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D89F0F33-5ABD-4FB0-A945-15AA99429C36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +71,8 @@ Global
 		{0647B367-EBD1-479A-BA42-3E7D0B4FC73B} = {F866E447-51E5-4673-801B-F20C1219CF82}
 		{797E58E6-505C-490C-B05E-CDCD46FA044A} = {72A3D700-49BD-4E44-9895-21DF18D8DBE4}
 		{7498F401-D905-4348-8BD0-89FA49E174B1} = {72A3D700-49BD-4E44-9895-21DF18D8DBE4}
+		{4620DBBD-AA65-4F7D-9975-0084E01BD97E} = {42DC6F89-8703-48AD-9D74-017812AF340B}
+		{D89F0F33-5ABD-4FB0-A945-15AA99429C36} = {42DC6F89-8703-48AD-9D74-017812AF340B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {345BFA20-0771-411E-A7BB-6E7703117AEA}

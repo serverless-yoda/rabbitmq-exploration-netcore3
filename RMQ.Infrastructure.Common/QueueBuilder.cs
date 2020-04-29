@@ -57,7 +57,25 @@ namespace RMQ.Infrastructure.Common
 
             return (T)this;
         }
+
+        public T CreateExchange()
+        {
+            var model = QueueBuilderInfo
+                            .Connection
+                            .CreateModel();
+
+            /*
+             * The most important change is that we now want to publish messages to our logs exchange instead of the nameless one. 
+             * We need to supply a routingKey when sending, but its value is ignored for fanout exchanges. 
+             */
+            model.ExchangeDeclare(exchange: Utility.EXCHANGE_NAME, 
+                                    type: ExchangeType.Fanout);
+
+            QueueBuilderInfo.Model = model;
+            return (T)this;
+        }
     }
+
 
 
     public class QueueDirectorBuilder : QueueCreateBuilder<QueueDirectorBuilder>
