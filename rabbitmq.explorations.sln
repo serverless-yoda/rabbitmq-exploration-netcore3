@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMQ.publishersubscriber.Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMQ.publishersubscriber.Worker", "RMQ.publishersubscriber.Worker\RMQ.publishersubscriber.Worker.csproj", "{D89F0F33-5ABD-4FB0-A945-15AA99429C36}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "direct-exchange", "direct-exchange", "{A87E13C4-C814-46F4-9D0D-C924955A0BEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMQ.directexchange.Console", "RMQ.directexchange.Console\RMQ.directexchange.Console.csproj", "{8A63CC29-DE9B-4BF0-AB4D-2B2A5D7B0911}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +65,10 @@ Global
 		{D89F0F33-5ABD-4FB0-A945-15AA99429C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D89F0F33-5ABD-4FB0-A945-15AA99429C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D89F0F33-5ABD-4FB0-A945-15AA99429C36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A63CC29-DE9B-4BF0-AB4D-2B2A5D7B0911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A63CC29-DE9B-4BF0-AB4D-2B2A5D7B0911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A63CC29-DE9B-4BF0-AB4D-2B2A5D7B0911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A63CC29-DE9B-4BF0-AB4D-2B2A5D7B0911}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +81,7 @@ Global
 		{7498F401-D905-4348-8BD0-89FA49E174B1} = {72A3D700-49BD-4E44-9895-21DF18D8DBE4}
 		{4620DBBD-AA65-4F7D-9975-0084E01BD97E} = {42DC6F89-8703-48AD-9D74-017812AF340B}
 		{D89F0F33-5ABD-4FB0-A945-15AA99429C36} = {42DC6F89-8703-48AD-9D74-017812AF340B}
+		{8A63CC29-DE9B-4BF0-AB4D-2B2A5D7B0911} = {A87E13C4-C814-46F4-9D0D-C924955A0BEE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {345BFA20-0771-411E-A7BB-6E7703117AEA}

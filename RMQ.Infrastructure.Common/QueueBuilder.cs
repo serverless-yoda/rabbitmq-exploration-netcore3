@@ -74,6 +74,19 @@ namespace RMQ.Infrastructure.Common
             QueueBuilderInfo.Model = model;
             return (T)this;
         }
+
+        public T CreateDirectExchange()
+        {
+            var model = QueueBuilderInfo
+                            .Connection
+                            .CreateModel();
+
+            model.ExchangeDeclare(exchange: Utility.EXCHANGE_NAME, 
+                type: ExchangeType.Direct);
+
+            QueueBuilderInfo.Model = model;
+            return (T)this;
+        }
     }
 
 

@@ -10,7 +10,15 @@ namespace RMQ.publishersubscriber.Console
     {
         static void Main(string[] args)
         {
-            PublishQueues();
+            for(var i = 0; i < 20; i++)
+            {
+                PublishQueues();
+
+            }
+
+           
+            WriteLine(" Press [enter] to exit.");
+            ReadLine();
         }
         /*
          * The core idea in the messaging model in RabbitMQ is that the producer never sends any messages directly to a queue. 
@@ -36,8 +44,6 @@ namespace RMQ.publishersubscriber.Console
                                        body: message);
 
             WriteLine(" [x] Sent {0}", message);
-            WriteLine(" Press [enter] to exit.");
-            ReadLine();
         }
     }
 }

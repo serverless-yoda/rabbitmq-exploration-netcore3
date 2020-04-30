@@ -4,5 +4,6 @@
     {
         public const string QUEUE_NAME = "RMQ_BASICQUEUE";
         public const string EXCHANGE_NAME = "RMQ_PUBLISHERSUBSCRIBER_EXCHANGE";
+        public const string DIRECT_EXCHANGE = "RMQ_DIRECTEXCHANGE";
     }
 }
