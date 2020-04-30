@@ -1,15 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using RMQ.Application;
 using RMQ.Infrastructure.Common;
+using System;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace RMQ.publishersubscriber.Worker
 {
@@ -33,14 +31,14 @@ namespace RMQ.publishersubscriber.Worker
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            
+
             while (!stoppingToken.IsCancellationRequested)
             {
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
 
                 var randomQueuename = _model.Model.QueueDeclare().QueueName;
-                _model.Model.QueueBind(queue: randomQueuename, 
-                                       exchange: Utility.EXCHANGE_NAME, 
+                _model.Model.QueueBind(queue: randomQueuename,
+                                       exchange: Utility.EXCHANGE_NAME,
                                        routingKey: "");
 
                 _logger.LogInformation("waiting for logs");

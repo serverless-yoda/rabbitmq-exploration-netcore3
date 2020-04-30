@@ -64,7 +64,7 @@ namespace RMQ.basicqueue.Worker
             var message = Encoding.UTF8.GetString(body.ToArray());
             var eventName = e.RoutingKey;
 
-            await ProcessEvent(null, eventName).ConfigureAwait(false);
+            await ProcessEvent(message, eventName).ConfigureAwait(false);
 
             ((AsyncEventingBasicConsumer)sender).Model.BasicAck(deliveryTag: e.DeliveryTag, multiple: false);
         }
