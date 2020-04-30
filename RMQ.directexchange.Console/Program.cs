@@ -34,7 +34,7 @@ namespace RMQ.directexchange.Console
                 "warning"
             };
 
-            for(int i = 1; i < 10; i++)
+            for(int i = 1; i < 1000; i++)
             {
                 int index = new Random().Next(1, 4);
                 string currentSeverity = severity[index];
