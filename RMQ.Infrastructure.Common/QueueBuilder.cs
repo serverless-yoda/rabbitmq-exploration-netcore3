@@ -81,7 +81,7 @@ namespace RMQ.Infrastructure.Common
                             .Connection
                             .CreateModel();
 
-            model.ExchangeDeclare(exchange: Utility.EXCHANGE_NAME, 
+            model.ExchangeDeclare(exchange: Utility.DIRECT_EXCHANGE, 
                 type: ExchangeType.Direct);
 
             QueueBuilderInfo.Model = model;
